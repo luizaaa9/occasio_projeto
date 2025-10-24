@@ -9,6 +9,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\ExercicioController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AnotacaoController;
 
 require __DIR__.'/auth.php';
 
@@ -19,6 +20,9 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function() {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::middleware('auth')->group(function() {
+    Route::resource('anotacoes', App\Http\Controllers\AnotacaoController::class);
+    });
     Route::get('/aulas', [AreaController::class, 'index'])->name('aulas.areas');
     Route::get('/aulas/{area}', [DisciplinaController::class, 'porArea'])
         ->name('aulas.disciplinas');

@@ -10,7 +10,10 @@
         <nav>
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('aulas.areas') }}">Aulas</a>
-            <!-- Adicione outros menus aqui -->
+            <a href="{{ route('anotacoes.index') }}">Anotações</a>
+            <a href="#">Simulados</a>
+            <a href="#">Histórico</a>
+            <a href="#">Calendário de estudos</a>
         </nav>
         <div>
             Olá, {{ auth()->user()->name }} |

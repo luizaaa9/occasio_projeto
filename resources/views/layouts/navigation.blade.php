@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="{{ route('home') }}">Sistema Educacional</a>
+    <a class="navbar-brand" href="{{ route('home') }}">Occasio</a>
 
     <ul class="navbar-nav ms-auto">
       @auth

@@ -9,6 +9,6 @@ class HomeController extends Controller
     public function index()
     {
         $areas = Area::all();
-        return view('home', compact('areas'));
+        return view('home.index', compact('areas'));
     }
 }
