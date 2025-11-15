@@ -10,7 +10,7 @@
         <nav>
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('aulas.areas') }}">Aulas</a>
-            <!-- Adicione outros menus aqui -->
+            <a href="{{ route('simulado.escolher') }}">Simulados</a>
         </nav>
         <div>
             Olá, {{ auth()->user()->name }} |
