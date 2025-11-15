@@ -9,16 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('anotacoes', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('titulo');
-            $table->text('conteudo')->nullable();
-            $table->timestamps();
-        });
-    }
+    public function up()
+{
+    Schema::create('anotacoes', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        $table->string('titulo');
+        $table->text('texto')->nullable();
+        $table->timestamps();
+    });
+}
+
 
     public function down(): void
     {

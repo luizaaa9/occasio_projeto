@@ -1,14 +1,16 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Area;
+use App\Models\Anotacao;
 
 class HomeController extends Controller
 {
     public function index()
-    {
-        $areas = Area::all();
-        return view('home.index', compact('areas'));
-    }
+{
+    $anotacoes = Anotacao::where('user_id', auth()->id())->latest()->get();
+
+    return view('home', compact('anotacoes'));
 }
+
+}
+

@@ -1,3 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.anotacoes-container {
+    width: 80%;
+    margin: 30px auto;
+    font-family: "Georgia", serif;
+}
+
+.anotacao-item {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.anotacao-item:hover {
+    background: #fdf7ff;
+    border-color: #c084fc;
+}
+
+.anotacao-box {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #d0cde1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}

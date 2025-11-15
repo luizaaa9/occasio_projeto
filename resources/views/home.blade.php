@@ -12,13 +12,16 @@
 
     <hr style="margin: 20px 0;">
 
-    @foreach($anotacoes as $anotacao)
+    @forelse($anotacoes as $anotacao)
         <a href="{{ route('anotacoes.show', $anotacao->id) }}" style="text-decoration:none; color:inherit;">
             <div class="anotacao-item">
                 <h3>{{ $anotacao->titulo }}</h3>
                 <small>{{ $anotacao->created_at->format('d/m/Y H:i') }}</small>
             </div>
         </a>
-    @endforeach
+    @empty
+        <p>Você ainda não criou nenhuma anotação.</p>
+    @endforelse
+
 </div>
 @endsection
